@@ -15,7 +15,7 @@ class _InscripcionState extends State<Inscripcion> {
     return Scaffold(
       //drawer: Drawers(),//desprende el drawer en la page
       appBar: AppBar(
-        title: Text("Procedimiento de inscrición"),
+        title: const Text("Procedimiento de inscrición"),
         centerTitle: true,
         backgroundColor: Colors.green,
       ),
