@@ -1,6 +1,5 @@
 import 'package:alumnos/HomePage.dart';
 import 'package:flutter/material.dart';
-//import 'package:nulti_auth/Routes/routes.dart';
 
 void main() => runApp(const MyApp());
 
