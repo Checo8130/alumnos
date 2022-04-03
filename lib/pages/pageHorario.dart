@@ -12,14 +12,12 @@ class _HorarioState extends State<Horario> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // drawer: Drawers(),//desprende el drawer en la page
-      appBar: AppBar(
-        title: const Text("Horario de curso nuevo ingreso"),
-        centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 29, 58, 105),
-      ),
-      body:  PdfViewer.openAsset(
-      'assets/Horario.pdf')
-    );
+        // drawer: Drawers(),//desprende el drawer en la page
+        appBar: AppBar(
+          title: const Text("Horario de curso nuevo ingreso"),
+          centerTitle: true,
+          backgroundColor: const Color.fromARGB(255, 29, 58, 105),
+        ),
+        body: PdfViewer.openAsset('assets/Horario.pdf'));
   }
 }
