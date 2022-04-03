@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../widget/drawer.dart';
+import 'package:pdf_render/pdf_render_widgets.dart';
 
 class Horario extends StatefulWidget {
   Horario({Key? key}) : super(key: key);
@@ -16,10 +14,12 @@ class _HorarioState extends State<Horario> {
     return Scaffold(
       // drawer: Drawers(),//desprende el drawer en la page
       appBar: AppBar(
-        title: Text("Horario de curso nuevo ingreso"),
+        title: const Text("Horario de curso nuevo ingreso"),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: const Color.fromARGB(255, 29, 58, 105),
       ),
+      body:  PdfViewer.openAsset(
+      'assets/Horario.pdf')
     );
   }
 }

@@ -1,7 +1,6 @@
 import 'package:alumnos/widget/drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:alumnos/widget/drawer.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({Key? key}) : super(key: key);
@@ -18,7 +17,7 @@ class _MainPageState extends State<MainPage> {
       endDrawer: Drawers(),
       appBar: AppBar(
         title: const Text("Bienvenidos"),
-        backgroundColor: Color.fromARGB(255, 5, 31, 164),
+        backgroundColor: const Color.fromARGB(255, 29, 58, 105),
       ),
     );
   }

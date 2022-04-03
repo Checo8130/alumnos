@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../widget/drawer.dart';
 
 class Bienvenidos extends StatefulWidget {
   Bienvenidos({Key? key}) : super(key: key);
@@ -15,9 +14,9 @@ class _BienvenidosState extends State<Bienvenidos> {
     return Scaffold(
       //drawer: Drawers(), //desprende el drawer en la page
       appBar: AppBar(
-        title: Text("Bienvenido aspirante"),
+        title: const Text("Bienvenido aspirante"),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: const Color.fromARGB(255, 29, 58, 105),
       ),
     );
   }

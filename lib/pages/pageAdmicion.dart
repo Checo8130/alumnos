@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../widget/drawer.dart';
 
 class Admision extends StatefulWidget {
   Admision({Key? key}) : super(key: key);
@@ -17,7 +15,7 @@ class _AdmisionState extends State<Admision> {
       appBar: AppBar(
         title: Text("Proceso de admision"),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: const Color.fromARGB(255, 29, 58, 105),
       ),
     );
   }

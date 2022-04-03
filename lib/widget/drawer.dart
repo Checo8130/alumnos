@@ -20,11 +20,11 @@ class _DrawersState extends State<Drawers> {
   final padding = EdgeInsets.symmetric(horizontal: 20);
   @override
   Widget build(BuildContext context) {
-    final imagen =
+    const imagen =
         "https://itcampeche.edu.mx/wp-content/uploads/2022/01/Copia-de-INGENIER%C3%8DA-1-360x203.jpg";
     return Drawer(
       child: Material(
-        color: Color.fromARGB(255, 5, 31, 164),
+        color: const Color.fromARGB(255, 29, 58, 105),
         child: ListView(
           padding: padding,
           children: <Widget>[
@@ -36,7 +36,7 @@ class _DrawersState extends State<Drawers> {
               icon: Icons.engineering,
             ),
             const SizedBox(height: 4),
-            Divider(color: Colors.white70),
+            const Divider(color: Colors.white70),
             const SizedBox(height: 48),
             buildMenu(
               text: "Conocenos",
@@ -91,8 +91,8 @@ class _DrawersState extends State<Drawers> {
     required IconData icon,
     VoidCallback? onClicked,
   }) {
-    final color = Colors.white;
-    final LetraDrawer = Colors.white70;
+    const color = Colors.white;
+    const LetraDrawer = Colors.white70;
     return ListTile(
       leading: Icon(icon, color: color),
       title: Text(text, style: TextStyle(color: color)),
