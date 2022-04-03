@@ -51,7 +51,7 @@ class _DrawersState extends State<Drawers> {
             ),
             const SizedBox(height: 48),
             buildMenu(
-              text: "Proceso de admición",
+              text: "Proceso de admisión",
               icon: Icons.app_registration,
               onClicked: () => selectedItem(context, 2),
             ),
