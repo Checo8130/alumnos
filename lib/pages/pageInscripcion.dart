@@ -31,7 +31,7 @@ class _InscripcionState extends State<Inscripcion> {
 
     style:TextStyle(
               fontSize: 15.0,)),
-            CupertinoButton(child: Text('http://escolares.ensenada.tecnm.mx'), onPressed: () {
+            CupertinoButton(child: Text('http://escolares.ensenada.tecnm.mx\n'), onPressed: () {
               launch("http://escolares.ensenada.tecnm.mx");
             }),
             new Image.network(
