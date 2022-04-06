@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Ficha extends StatefulWidget {
-  Ficha({Key? key}) : super(key: key);
+  const Ficha({Key? key}) : super(key: key);
 
   @override
   State<Ficha> createState() => _FichaState();
@@ -49,15 +51,38 @@ class _FichaState extends State<Ficha> {
           ),
           SizedBox(
             height: 450,
-            child: SfPdfViewer.asset('assets/Correo.pdf'),
+            child: SfPdfViewer.network(
+                'https://www.ensenada.tecnm.mx/wp-content/uploads/2022/04/Lista-de-correos-de-aspirantes-2022-2.pdf'),
           ),
           const Text(
               '\n\nSi su nombre no es el correcto favor de enviar WhatsApp al número 646 272 83 00. \n\n'
               'Para los aspirantes que saquen ficha después de este corte, la siguiente lista se publicara el 08 de abril 2022. \n\n'
               '2) Para realizar tú examen (evaluación diagnóstica) tiene dos modalidades, presencial o en línea, a continuación, se presenta liga de cuestionario para que selecciones la modalidad, es necesario llenarlo con tu correo institucional.'
-              'Selección de modalidad:  https://forms.gle/rddsqb7MkdSLS7k2A \n\n'
+              '\n\nSelección de modalidad:',
+              style: TextStyle(
+                fontSize: 16.0,
+              ),
+              textAlign: TextAlign.justify),
+          CupertinoButton(
+              child: const Text('https://forms.gle/rddsqb7MkdSLS7k2A'),
+              onPressed: () {
+                launch('https://forms.gle/rddsqb7MkdSLS7k2A');
+              }),
+          const Text(
               '3) Examen diagnóstico \n\n'
-              'a) Liga: \n'
+              'a) Liga: ',
+              style: TextStyle(
+                fontSize: 16.0,
+              ),
+              textAlign: TextAlign.justify),
+          CupertinoButton(
+              child: const Text(
+                  'http://svo-3-101.servidoresvirtuales.mx/moodle/login/index.php'),
+              onPressed: () {
+                launch(
+                    "http://svo-3-101.servidoresvirtuales.mx/moodle/login/index.php");
+              }),
+          const Text(
               'http://svo-3-101.servidoresvirtuales.mx/moodle/login/index.php \n'
               'b) En línea estará abierto del 01 de abril al 19 de junio. \n'
               'c) Guía para realizar examen.\n\n'
@@ -88,7 +113,8 @@ class _FichaState extends State<Ficha> {
           ),
           SizedBox(
             height: 300,
-            child: SfPdfViewer.asset('assets/Presentar.pdf'),
+            child: SfPdfViewer.network(
+                'https://www.ensenada.tecnm.mx/wp-content/uploads/2022/04/Guia-para-presentar-Examen-de-Admision.pdf'),
           ),
         ],
       ),
