@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Convovatoria extends StatefulWidget {
-  Convovatoria({Key? key}) : super(key: key);
+  const Convovatoria({Key? key}) : super(key: key);
 
   @override
   State<Convovatoria> createState() => _ConvovatoriaState();
@@ -25,7 +25,8 @@ class _ConvovatoriaState extends State<Convovatoria> {
               style: TextStyle(
                 fontSize: 35.0,
                 fontWeight: FontWeight.bold,
-              )),
+              ),
+              textAlign: TextAlign.center),
 
           const Text(
               'El Instituto Tecnológico de Ensenada del TecNM te invita a ser parte de esta comunidad tecnológica, te convoca a ingresar en alguno de nuestro programa educativo si \n'
@@ -37,7 +38,7 @@ class _ConvovatoriaState extends State<Convovatoria> {
               style: TextStyle(
                 fontSize: 15.0,
               )),
-          new Image.network(
+          Image.network(
             'https://www.ensenada.tecnm.mx/wp-content/uploads/2022/03/Convocatoria-2022-2.jpeg',
           ),
 /*

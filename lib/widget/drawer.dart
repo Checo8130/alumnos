@@ -57,13 +57,13 @@ class _DrawersState extends State<Drawers> {
             ),
             const SizedBox(height: 48),
             buildMenu(
-              text: "Procedimiento para tramitar ficha de nuevo ingreso",
+              text: "Proceso y guía para el examen de admisión",
               icon: Icons.book_outlined,
               onClicked: () => selectedItem(context, 3),
             ),
             const SizedBox(height: 48),
             buildMenu(
-              text: "Horario de curso para aspirantes Nuevo ingreso",
+              text: "Horario del curso para aspirantes Nuevo ingreso",
               icon: Icons.calendar_today,
               onClicked: () => selectedItem(context, 4),
             ),

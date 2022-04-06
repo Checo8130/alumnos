@@ -1,5 +1,4 @@
 import 'package:alumnos/widget/drawer.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -19,6 +18,11 @@ class _MainPageState extends State<MainPage> {
         title: const Text("Bienvenidos"),
         backgroundColor: const Color.fromARGB(255, 29, 58, 105),
       ),
+      body: const Center(
+          child: Text(
+        "¡Bienvenidos Aspirantes!",
+        style: TextStyle(fontSize: 27.0),
+      )),
     );
   }
 }

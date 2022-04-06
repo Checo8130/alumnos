@@ -29,6 +29,8 @@ environment:
 dependencies:
   video_player: ^2.3.0
   pdf_render: ^1.0.23
+  syncfusion_flutter_pdfviewer: ^20.1.47-beta
+  url_launcher: ^6.0.20
   flutter:
     sdk: flutter
 
@@ -59,6 +61,7 @@ flutter:
     - assets/Horario.pdf
     - assets/Correo.pdf
     - assets/Presentar.pdf
+    - assets/inscripcion.pdf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

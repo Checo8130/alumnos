@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:pdf_render/pdf_render_widgets.dart';
 
 class Bienvenidos extends StatefulWidget {
   Bienvenidos({Key? key}) : super(key: key);
@@ -18,6 +18,7 @@ class _BienvenidosState extends State<Bienvenidos> {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 29, 58, 105),
       ),
+      body: PdfViewer.openAsset('assets/Horario.pdf'),
     );
   }
 }
