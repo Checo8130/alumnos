@@ -14,7 +14,7 @@ class _instalacionesvideo3State extends State<instalacionesvideo3> {
     return const Scaffold(
         body: Center(
             child: videplayer(
-                url: 'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/campoypistaipad.mp4')
+                url: 'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/campoypistaipad.mp4',title:"Campo de futbol y pista de atletismo")
         )
     );
   }

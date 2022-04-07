@@ -3,7 +3,9 @@ import 'package:video_player/video_player.dart';
 
 class videplayer extends StatefulWidget {
   final String url;
-  const videplayer({Key? key,required this.url}) : super(key: key);
+  final String title;
+  const videplayer({Key? key, required this.url, required this.title})
+      : super(key: key);
 
   @override
   _videplayerState createState() => _videplayerState();
@@ -14,8 +16,7 @@ class _videplayerState extends State<videplayer> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-        widget.url)
+    _controller = VideoPlayerController.network(widget.url)
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
@@ -32,13 +33,25 @@ class _videplayerState extends State<videplayer> {
         backgroundColor: const Color.fromARGB(255, 29, 58, 105),
       ),
       body: Center(
-        child: _controller.value.isInitialized
+          child: Column(children: [
+        Align(
+          alignment: Alignment.topLeft,
+          child: Text(
+            widget.title,
+            style: const TextStyle(
+                fontSize: 32, color: Color.fromARGB(255, 29, 58, 105)),
+          ),
+        ),
+        const SizedBox(
+          height: 50,
+        ),
+        _controller.value.isInitialized
             ? AspectRatio(
-          aspectRatio: _controller.value.aspectRatio,
-          child: VideoPlayer(_controller),
-        )
+                aspectRatio: _controller.value.aspectRatio,
+                child: VideoPlayer(_controller),
+              )
             : Container(),
-      ),
+      ])),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {

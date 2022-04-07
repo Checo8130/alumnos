@@ -14,7 +14,7 @@ class _instalacionesvideo2State extends State<instalacionesvideo2> {
     return const Scaffold(
         body: Center(
             child: videplayer(
-                url: 'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Recorrido-poligono-sur_2.mp4')
+                url: 'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Recorrido-poligono-sur_2.mp4',title:"Poligono Sur")
         )
     );
   }

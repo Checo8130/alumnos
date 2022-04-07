@@ -11,10 +11,11 @@ class conocenosvideo extends StatefulWidget {
 class _conocenosvideoState extends State<conocenosvideo> {
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
+    return  const  Scaffold(
         body:  Center(
             child: videplayer(
-                url: 'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/video-promo-ite-renovado-2021.mp4')
+                url: 'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/video-promo-ite-renovado-2021.mp4'
+            ,title:"Conócenos")
         )
     );
   }
